@@ -5,6 +5,7 @@ using UnityEngine;
 public class Destruidor : MonoBehaviour
 {
     public GameObject bola;
+    public Vector2 Velocidade;
 
     public Vector2 PosicaoInicial { get; private set; }
 
@@ -13,6 +14,7 @@ public class Destruidor : MonoBehaviour
         if (bola == null)
             bola = GameObject.FindWithTag("Bola");
         PosicaoInicial = new Vector2(bola.transform.position.x, bola.transform.position.y);
+        var rigidBody = bola.GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,6 +30,8 @@ public class Destruidor : MonoBehaviour
     private void ResetBolaPosition()
     {
         bola.transform.position = PosicaoInicial;
+        bola.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        bola.GetComponent<Rigidbody2D>().AddForce(Velocidade);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
