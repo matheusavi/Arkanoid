@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6356481853410370583}
   m_Layer: 0
   m_Name: IceSprite
-  m_TagString: Untagged
+  m_TagString: Bloco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852372761507722140}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.69793, y: 3.2032835, z: -6.309255}
-  m_LocalScale: {x: 1.36, y: 1.7635801, z: 1.0374}
+  m_LocalScale: {x: 1.146888, y: 1.4872271, z: 0.8748394}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 0}
+  Collider: {fileID: 0}
 --- !u!50 &6356481853410370583
 Rigidbody2D:
   serializedVersion: 4
